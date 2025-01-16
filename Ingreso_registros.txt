@@ -1,0 +1,86 @@
+- Hecho por Juan Camilo Galvis Agudelo
+
+USE Transito;
+
+INSERT INTO Departamento(Nombre)
+VALUES ('Risaralda'),
+('Bolivar'),
+('Magdalena'),
+('Sucre'),
+('Caldas');
+
+INSERT INTO Ciudad(Nombre,Id_Departamento)
+VALUES ('Pereira',1),
+('San Alfonzo',2),
+('Dosquebradas',1),
+('Virginia',4),
+('Aguazure',3);
+
+INSERT INTO Propietario(Nombre,Apellidos,No_domicilio,Fecha_nacimiento,Calle,Id_Ciudad)
+VALUES ('Pastor','Gaviria Horro',12,'2023-11-08','Elment Street',1),
+('Pastor','Agudelo Socorro',1,'2020-10-18','Simón Bolivar',2),
+('Roberto','Espinel Peréz',102,'2012-12-08','La bella rosa',3),
+('Federico','Santa Horro',124,'1923-11-18','La cardinal',1),
+('Sofía','Gaviria Salázar',402,'2013-11-18','19 Norte',5),
+('Luis','Dorado Durán',111,'2023-01-08','Hunted plaza',1);
+
+INSERT INTO Persona_Infractora(Nombre,Apellidos,No_domicilio,Fecha_nacimiento,Calle,Id_Ciudad)
+VALUES ('Alvaro','Nazaret Peréz',452,'2003-10-08','13 Sur',2),
+('Pastor','Dorado Socorro',10,'2020-10-18','Sesame street',1),
+('Billy','Joel Peréz',2,'2012-12-08','15 Norte',3),
+('Michael','West Jackson',12,'1923-11-18','La cardinal',1),
+('Yara','Gaviria Giraldo',42,'2013-11-18','21 Oeste',5),
+('José','Miguel Santa',11,'2023-01-08','Hunted plaza',4);
+
+INSERT INTO Agente_de_Transito(Nombre,Apellidos,No_domicilio,Fecha_nacimiento,Calle)
+VALUES ('Cesar','Augusto Peréz',42,'2003-12-08','La bella rosa'),
+('Hugo','Macondo Pino',120,'2020-10-18','Viacruz street'),
+('Hitler','Joel Suaréz',246,'2012-03-08','15 Sur'),
+('Lincon','Díaz Evelio',2,'1823-02-18','La bella rosa'),
+('Simón','Gaviria Rodrígez',2,'2023-11-12','45 Oeste'),
+('José','Miguel Fast',11,'2023-11-18','Laver plaza');
+
+INSERT INTO Casa_Automotriz(Direccion)
+VALUES ('Los hermanos Toyo'),
+('La reparadora de la esquina'),
+('Todo motos'),
+('Motocruz'),
+('RumRumCarros');
+
+INSERT INTO Marca(Nombre)
+VALUES ('Mazda'),
+('Ferrari'),
+('Yamaha'),
+('BMW'),
+('Toyota');
+
+INSERT INTO Modelo(Nombre, Potencia, Id_Marca)
+VALUES ('23W','1,36 CV ',1),
+('Aventador','1,46 CV ',1),
+('Brum','10,8 CV ',2),
+('Cobra','2,31 CV ',3),
+('LaVerg','1,06 CV ',3);
+
+INSERT INTO Vehiculo(Matricula, Fecha_matriculacion, Id_Propietario, Id_Casa_Automotriz, Id_Modelo)
+VALUES ('BCD-123','2012-10-04',1,4,2),
+('ASD-454','2003-12-01',1,4,3),
+('SDF-456','2003-02-01',2,5,4),
+('ERT-758','2010-11-12',2,5,1),
+('THD-345','2003-10-09',3,1,2),
+('SGK-567','2015-10-08',3,3,3);
+
+INSERT INTO Lugar(Kilometro,Carretera,Dirección)
+VALUES (45,'Simón Bolivar','12 Norte'),
+(505,'Pollo','7 Occidente'),
+(66,'Rio viejo','13 Sur'),
+(12,'La verde','25 Oeste'),
+(12,'La vieja','15 Norte');
+
+INSERT INTO Multa(Fecha_multa,Importe,Descripcion_infraccion,Id_Persona_Infractora,Id_Agente,Id_Lugar,Id_Vehiculo)
+VALUES ('2015-10-08',100000,'Atropello a 15 huerfanos',1,2,4,3),
+('2010-12-01',150000,'Se paso un semáforo',2,2,4,1),
+('2022-10-10',230000,'Atropello un perro',2,5,4,2),
+('2005-03-03',123000,'Hablo en el teléfono mientras conducia',1,1,1,2),
+('2011-11-08',450000,'Conducia sin frenos',2,2,2,1);
+
+
